@@ -36,7 +36,8 @@ class Project(models.Model):
             'view_mode': 'tree,form',
             'res_model': 'purchase.order',
             'domain': [('project_id', '=', self.id)],
-            'context': "{'create': True}"
+            # 'context': "{'create': False,'edit'}"
+            'context': "{'create': False,'edit':False}"
         }
 
     def compute_count(self):
