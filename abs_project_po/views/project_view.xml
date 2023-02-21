@@ -7,8 +7,8 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='settings']" position="after">
                 <page string="Purchase Orders">
-                    <field name="purchase_order_ids">
-                        <tree >
+                    <field name="purchase_order_ids" readonly='True'>
+                        <tree editable='bottom'>
                             <field name='company_id' invisible='1'/>
                             <field name='name'/>
                             <field name='date_order'/>
@@ -28,6 +28,13 @@
                     icon="fa-credit-card">
                     <field string="Purchase Orders" name="po_count" widget="statinfo"/>
                 </button>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="create_po" string="Create Purchase Order" type="object" class="oe_highlight" />
+
+                <!-- <button class="oe_stat_button" type="object" string="Create Purchase Order" name="create_po"
+                    icon="fa-Plus"> -->
+                <!-- </button> -->
             </xpath>
         </field>
     </record>    

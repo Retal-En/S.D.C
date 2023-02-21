@@ -30,6 +30,7 @@ class Project(models.Model):
 
     def get_po(self):
         self.ensure_one()
+        proj_id= self.id 
         return {
             'type': 'ir.actions.act_window',
             'name': 'Purchase Orders',
@@ -38,6 +39,19 @@ class Project(models.Model):
             'domain': [('project_id', '=', self.id)],
             # 'context': "{'create': False,'edit'}"
             'context': "{'create': False,'edit':False}"
+        }
+
+
+
+    def create_po(self):
+        self.ensure_one()
+        proj_id= self.id 
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Purchase Orders',
+            'view_mode': 'form',
+            'res_model': 'purchase.order',
+            'context': {'default_project_id': proj_id}
         }
 
     def compute_count(self):
