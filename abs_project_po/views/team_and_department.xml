@@ -63,7 +63,7 @@
             <field name="arch" type="xml">
                 <tree >
                     <field  name="name"/>
-                    <field name="poject_manager"/>
+                    <!-- <field name="poject_manager"/> -->
                     <field name="team_leader" />
                 </tree>
             </field>
