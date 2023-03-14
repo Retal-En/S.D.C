@@ -29,8 +29,11 @@
     'version'     : '1.0',
     'depends'     : ['base','purchase','project'],
     'data'        : [
+                    'security/ir.model.access.csv',
+                    'security/security.xml',
                     'views/purchase_order_view.xml',
                     'views/project_view.xml',
+                    'views/team_and_department.xml',
                     ],
     'images': ['static/description/banner.png'],
     'installable' : True,

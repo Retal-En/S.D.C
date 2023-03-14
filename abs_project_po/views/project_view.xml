@@ -36,6 +36,13 @@
                     icon="fa-Plus"> -->
                 <!-- </button> -->
             </xpath>
+                        
+            <field name="tag_ids" position="after">
+                <field name="team_id" required="1"/>
+            </field>
+
+
+            
         </field>
     </record>    
 </odoo>

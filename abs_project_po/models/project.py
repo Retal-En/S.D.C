@@ -25,6 +25,7 @@ class Project(models.Model):
 
     purchase_order_ids = fields.One2many('purchase.order','project_id',string="Purchase Orders")
     po_count = fields.Integer(compute='compute_count')
+    team_id = fields.Many2one('project.team')
 
 
 

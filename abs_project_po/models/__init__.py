@@ -20,4 +20,5 @@
 #################################################################################
 from. import purchase_order
 from. import project
+from. import team_and_department
 
